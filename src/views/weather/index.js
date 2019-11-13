@@ -5,7 +5,7 @@ import WeatherForm from '../../components/weatherForm';
 import WeatherInfo from '../../components/weatherInfo';
 import API_KEY from '../../config.js';
 
-class Home extends Component {
+class Weather extends Component {
   constructor() {
     super();
 
@@ -54,4 +54,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Weather;

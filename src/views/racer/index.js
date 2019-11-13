@@ -28,11 +28,19 @@ class Racer extends Component {
 
     const URL = `http://ergast.com/api/f1/${season}/${round}/driverStandings.json`
 
-    let response = await fetch(URL);
+    fetch(URL)
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          standings :
+          data.MRData.StandingsTable.StandingsLists[0].DriverStandings
+        }))
+      .catch(err => {
+        console.log(err);
+        alert(err);
+      })
 
-    let data = await response.json();
 
-    this.setState({ standings : data.MRData.StandingsTable.StandingsLists[0].DriverStandings});
   }
 
   render() {
@@ -41,6 +49,7 @@ class Racer extends Component {
         <div className="col-md-12">
           <RacerForm getRacers={this.getRacers}/>
           <RacerInfo standings={this.state.standings}/>
+        
 
         </div>
       </div>

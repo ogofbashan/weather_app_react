@@ -7,17 +7,17 @@ class Header extends Component {
     return(
       <header className="Header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <NavLink className="navbar-brand" to='/'>Weather</NavLink>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <NavLink className="navbar-brand" to='/'>Home</NavLink>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item active">
-                <NavLink className="nav-link" to='/'>Home <span className="sr-only">(current)</span></NavLink>
+              <li className="nav-item">
+                <NavLink className="nav-link" to='/weather'>Weather</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to='/racer'>Racer</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to='/checkout'>Checkout</NavLink>
               </li>
             </ul>
           </div>
