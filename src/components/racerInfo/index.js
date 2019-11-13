@@ -3,7 +3,6 @@ import './index.css';
 
 class RacerInfo extends Component {
   render() {
-    console.log(this.props.data);
     return(
       <div className="row RacerInfo">
         <div className="col-md-12">
@@ -18,16 +17,13 @@ class RacerInfo extends Component {
               </tr>
             </thead>
           {
-            this.props.data.MRData && this.props.data.MRData.RaceTable.Races[0].Results.map( (Short)=> (
-
-
-
+            this.props.standings && this.props.standings.map( (driver)=> (
                       <tr>
-                        <td>{Short.position}</td>
-                        <td><a href={Short.Driver.url}>{Short.Driver.givenName} {Short.Driver.familyName}</a></td>
-                        <td>{Short.Driver.nationality}</td>
-                        <td>{Short.Constructor.name}</td>
-                        <td>{Short.points}</td>
+                        <td>{driver.position}</td>
+                        <td><a href={driver.Driver.url}>{driver.Driver.givenName} {driver.Driver.familyName}</a></td>
+                        <td>{driver.Driver.nationality}</td>
+                        <td>{driver.Constructors[0].name}</td>
+                        <td>{driver.points}</td>
                       </tr>
                   ))
           }
