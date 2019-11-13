@@ -3,7 +3,6 @@ import './index.css';
 
 class WeatherInfo extends Component {
   render() {
-    console.log(this.props.data);
     return(
       <div className="row WeatherInfo">
         <div className="col-md-12">

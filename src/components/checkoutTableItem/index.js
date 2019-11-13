@@ -18,7 +18,7 @@ function CheckoutTableItem(props) {
             :
             <button
               className="btn btn-danger"
-              onClick={() => alert(props.item.id)}
+              onClick={() => props.removeItem(props.item.id)}
             >
               Remove
             </button>

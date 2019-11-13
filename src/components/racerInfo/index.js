@@ -20,7 +20,13 @@ class RacerInfo extends Component {
             this.props.standings && this.props.standings.map( (driver)=> (
                       <tr>
                         <td>{driver.position}</td>
-                        <td><a href={driver.Driver.url}>{driver.Driver.givenName} {driver.Driver.familyName}</a></td>
+                        <td>
+                          <a
+                            href={driver.Driver.url}
+                            target='blank'
+                            rel='noopener noreferrer'
+                          >
+                        {driver.Driver.givenName} {driver.Driver.familyName}</a></td>
                         <td>{driver.Driver.nationality}</td>
                         <td>{driver.Constructors[0].name}</td>
                         <td>{driver.points}</td>
